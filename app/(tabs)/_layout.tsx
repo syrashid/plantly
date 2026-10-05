@@ -2,7 +2,7 @@ import { Redirect, Tabs } from "expo-router";
 import Entypo from "@expo/vector-icons/Entypo";
 import Feather from "@expo/vector-icons/Feather";
 import { theme } from "@/theme";
-import { useUserStore } from "../store/userStore";
+import { useUserStore } from "@/store/userStore";
 
 export default function Layout() {
   const hasFinishedOnboarding = useUserStore(
