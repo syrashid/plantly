@@ -2,7 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
-type PlantType = {
+export type PlantType = {
   id: string;
   name: string;
   wateringFrequencyDays: number;
@@ -17,6 +17,9 @@ type PlantsState = {
   waterPlant: (plantId: string) => void;
 };
 
+// Just a learning note, the ...state we spread each time is redundant in zustand
+// The reason we do it however is because we need a new state reference each time
+// to indicate something has changed
 export const usePlantStore = create(
   persist<PlantsState>(
     (set) => ({
