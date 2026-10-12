@@ -41,6 +41,7 @@ export const usePlantStore = create(
         const savedImageUri = destinationFile.uri;
 
         if (imageUri) {
+          // this doesn’t create a file, it just wraps the existing temporary file so you have a handle to read from it.
           const sourceFile = new File(imageUri);
           await sourceFile.copy(destinationFile);
         }
