@@ -15,7 +15,7 @@ export function PlantCard({ plant }: { plant: PlantType }) {
             {plant.name}
           </Text>
           <Text style={styles.subtitle}>
-            Water every {plant.wateringFrequencyDays} days
+            Water every {pluralizeDays(plant.wateringFrequencyDays)}
           </Text>
         </View>
       </Pressable>

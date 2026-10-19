@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "plantly",
+    "name": "Plantly",
     "slug": "plantly",
     "scheme": "plantly",
     "version": "1.0.0",
@@ -8,7 +8,11 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.srashid.plantly",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -25,7 +29,26 @@
     },
     "plugins": [
       "expo-router",
-      "expo-status-bar"
-    ]
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#9CF089",
+          "image": "./assets/splash-image.png",
+          "dark": {
+            "image": "./assets/splash-image.png",
+            "backgroundColor": "#56A082"
+          },
+          "imageWidth": 150
+        }
+      ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5f864349-0f36-4075-821d-c8a1b4f03614"
+      }
+    },
+    "owner": "srashid"
   }
 }

@@ -42,7 +42,7 @@ export default function NewScreen() {
     }
 
     addPlant(name, Number(days), imageUri);
-    router.navigate("/");
+    router.back("/");
   };
 
   const handleChooseImage = async () => {

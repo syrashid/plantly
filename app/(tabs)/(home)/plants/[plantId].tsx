@@ -46,7 +46,7 @@ export default function PlantDetails() {
           text: "Yes",
           onPress: () => {
             removePlant(plant.id);
-            router.navigate("/");
+            router.back();
           },
           style: "destructive",
         },
